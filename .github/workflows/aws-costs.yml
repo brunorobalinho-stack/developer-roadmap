@@ -2,9 +2,11 @@ name: Sends Daily AWS Costs to Slack
 on:
   # Allow manual Run
   workflow_dispatch:
-  # Run at 7:00 UTC every day
-  schedule:
-    - cron: "0 7 * * *"
+  # Schedule disabled - fork does not have required AWS/Slack secrets
+  # (COST_AWS_ACCESS_KEY, COST_AWS_SECRET_KEY, COST_AWS_REGION, SLACK_COST_CHANNEL, SLACK_TOKEN)
+  # To re-enable, uncomment the schedule block below and configure the secrets.
+  # schedule:
+  #   - cron: "0 7 * * *"
 jobs:
   aws_costs:
     runs-on: ubuntu-latest
