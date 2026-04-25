@@ -2,8 +2,11 @@ name: Upgrade Dependencies
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * 0'
+  # Schedule disabled - fork does not have permissions to open PRs against
+  # kamranahmedse/developer-roadmap, and reviewer 'kamranahmedse' is not a
+  # collaborator on this fork. To re-enable, uncomment the schedule block below.
+  # schedule:
+  #   - cron: '0 0 * * 0'
 
 jobs:
   upgrade-deps:
